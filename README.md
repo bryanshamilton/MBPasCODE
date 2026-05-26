@@ -36,6 +36,7 @@ chmod +x setup.sh
 │   ├── gh/config.yml              # GitHub CLI
 │   ├── ghostty/config.ghostty     # Terminal emulator
 │   └── git/gitconfig              # Git user config
+├── wallpaper/desktop.png          # Desktop background
 └── README.md
 ```
 

@@ -61,6 +61,11 @@ else
   echo "✅ Fish is already the default shell"
 fi
 
+# ─── Wallpaper ─────────────────────────────────────────────────────────────────
+echo ""
+echo "🖼️  Setting desktop wallpaper..."
+osascript -e "tell application \"System Events\" to set picture of every desktop to \"$DOTFILES_DIR/wallpaper/desktop.png\""
+
 # ─── macOS Defaults ────────────────────────────────────────────────────────────
 echo ""
 echo "⚙️  Applying macOS preferences..."
