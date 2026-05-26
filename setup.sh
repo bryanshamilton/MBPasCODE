@@ -88,8 +88,8 @@ defaults import com.jordanbaird.Ice "$DOTFILES_DIR/config/ice/com.jordanbaird.Ic
 
 # ─── Wallpaper ─────────────────────────────────────────────────────────────────
 echo ""
-echo "🖼️  Setting desktop wallpaper..."
-osascript -e "tell application \"System Events\" to set picture of every desktop to \"$DOTFILES_DIR/wallpaper/desktop.png\""
+echo "🖼️  Setting desktop wallpaper (fit to screen, black background)..."
+python3 "$DOTFILES_DIR/scripts/set_wallpaper.py" "$DOTFILES_DIR/wallpaper/desktop.png"
 
 # ─── macOS Defaults ────────────────────────────────────────────────────────────
 echo ""
