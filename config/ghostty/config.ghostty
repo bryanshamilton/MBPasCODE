@@ -39,7 +39,7 @@ macos-option-as-alt = true
 # ============ CURSOR ============
 cursor-style = bar
 cursor-style-blink = true
-shell-integration-features = no-cursor,sudo,title
+shell-integration-features = sudo,title
 
 # ============ BEHAVIOR ============
 copy-on-select = clipboard
