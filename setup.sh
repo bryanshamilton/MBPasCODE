@@ -42,6 +42,9 @@ link_config "$DOTFILES_DIR/config/ghostty/config.ghostty"   "$HOME/.config/ghost
 link_config "$DOTFILES_DIR/config/fish/config.fish"         "$HOME/.config/fish/config.fish"
 link_config "$DOTFILES_DIR/config/borders/bordersrc"        "$HOME/.config/borders/bordersrc"
 link_config "$DOTFILES_DIR/config/atuin/config.toml"        "$HOME/.config/atuin/config.toml"
+link_config "$DOTFILES_DIR/config/AutoRaise/config"         "$HOME/.config/AutoRaise/config"
+link_config "$DOTFILES_DIR/config/git/gitconfig"            "$HOME/.gitconfig"
+link_config "$DOTFILES_DIR/config/gh/config.yml"            "$HOME/.config/gh/config.yml"
 
 # ─── Set Fish as default shell ─────────────────────────────────────────────────
 FISH_PATH="/opt/homebrew/bin/fish"

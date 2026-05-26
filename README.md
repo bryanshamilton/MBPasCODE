@@ -29,10 +29,13 @@ chmod +x setup.sh
 ├── setup.sh                   # Bootstrap script
 ├── config/
 │   ├── aerospace/aerospace.toml   # Tiling window manager
-│   ├── ghostty/config.ghostty     # Terminal emulator
-│   ├── fish/config.fish           # Shell config
+│   ├── AutoRaise/config           # Auto-focus follows mouse
+│   ├── atuin/config.toml          # Shell history
 │   ├── borders/bordersrc          # Active window borders
-│   └── atuin/config.toml          # Shell history
+│   ├── fish/config.fish           # Shell config
+│   ├── gh/config.yml              # GitHub CLI
+│   ├── ghostty/config.ghostty     # Terminal emulator
+│   └── git/gitconfig              # Git user config
 └── README.md
 ```
 
