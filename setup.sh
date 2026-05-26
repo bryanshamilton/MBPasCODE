@@ -122,11 +122,10 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Trackpad: disable natural scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Trackpad: three-finger horizontal swipe for workspace switching
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2
-
-# Trackpad: four-finger horizontal swipe
-defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerHorizSwipeGesture -int 2
+# Trackpad: disable native swipe between Spaces (handled by BTT + Aerospace)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerHorizSwipeGesture -int 0
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Trackpad: four-finger vertical swipe (Mission Control / App Exposé)
 defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int 2
