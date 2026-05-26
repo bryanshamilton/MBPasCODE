@@ -48,6 +48,7 @@ link_config "$DOTFILES_DIR/config/borders/bordersrc"        "$HOME/.config/borde
 link_config "$DOTFILES_DIR/config/atuin/config.toml"        "$HOME/.config/atuin/config.toml"
 link_config "$DOTFILES_DIR/config/AutoRaise/config"         "$HOME/.config/AutoRaise/config"
 link_config "$DOTFILES_DIR/config/git/gitconfig"            "$HOME/.gitconfig"
+link_config "$DOTFILES_DIR/config/git/gitignore_global"     "$HOME/.config/git/gitignore_global"
 link_config "$DOTFILES_DIR/config/gh/config.yml"            "$HOME/.config/gh/config.yml"
 
 # ─── Set Fish as default shell ─────────────────────────────────────────────────
@@ -108,14 +109,44 @@ echo "⚙️  Applying macOS preferences..."
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# Disable press-and-hold for keys (enable key repeat everywhere)
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Trackpad: disable natural scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Trackpad: three-finger horizontal swipe for workspace switching
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+# Trackpad: four-finger horizontal swipe
+defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerHorizSwipeGesture -int 2
+
+# Trackpad: four-finger vertical swipe (Mission Control / App Exposé)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int 2
+
+# Trackpad: two-finger double-tap (smart zoom)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -int 1
+
 # Show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Disable natural scrolling (optional - comment out if you prefer natural)
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Show status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+echo "  ✅ macOS preferences applied"
 
 echo ""
 echo "✨ Setup complete! Please restart your terminal (or log out/in) for all changes to take effect."
+echo ""
+echo "Optional next steps:"
+echo "  • Run 'scripts/setup_ssh.sh' to generate and add SSH key to GitHub"
+if [ -f "$DOTFILES_DIR/config/btt/Default.bttpreset" ]; then
+  echo "  • Open BetterTouchTool → Presets → Import to load config/btt/Default.bttpreset"
+fi

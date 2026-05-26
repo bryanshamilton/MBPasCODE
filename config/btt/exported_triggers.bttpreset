@@ -1,0 +1,10 @@
+[
+  {
+    "BTTLastUpdatedAt" : 1779453101.2385499,
+    "BTTTriggerType" : 106,
+    "BTTTriggerTypeDescriptionReadOnly" : "4 Finger Swipe Right",
+    "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+    "BTTUUID" : "CE3D7A42-53E8-444D-8C5C-25016A37425D",
+    "BTTOrder" : 0
+  }
+]
