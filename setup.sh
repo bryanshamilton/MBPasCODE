@@ -81,6 +81,10 @@ else
   echo "  ✅ Aerospace already running"
 fi
 
+# ─── Dock ──────────────────────────────────────────────────────────────────────
+echo ""
+python3 "$DOTFILES_DIR/scripts/setup_dock.py"
+
 # ─── App Preferences ───────────────────────────────────────────────────────────
 echo ""
 echo "🧊 Importing Ice (menu bar) preferences..."
