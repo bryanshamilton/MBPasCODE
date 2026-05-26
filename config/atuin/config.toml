@@ -1,0 +1,7 @@
+# Atuin - Shell History
+# Only non-default settings are specified here
+
+enter_accept = true
+
+[sync]
+records = true
