@@ -17,7 +17,11 @@ fi
 
 # ─── Brewfile ──────────────────────────────────────────────────────────────────
 echo "📦 Installing packages from Brewfile..."
-brew bundle --file="$DOTFILES_DIR/Brewfile"
+if ! brew bundle --file="$DOTFILES_DIR/Brewfile"; then
+  echo ""
+  echo "⚠️  Some Brewfile items failed (see above). Continuing with the rest of setup..."
+  echo ""
+fi
 
 # ─── Symlink configs ──────────────────────────────────────────────────────────
 echo ""
