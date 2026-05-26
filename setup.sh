@@ -65,6 +65,22 @@ else
   echo "✅ Fish is already the default shell"
 fi
 
+# ─── Start services ────────────────────────────────────────────────────────────
+echo ""
+echo "🚀 Starting services..."
+
+# AutoRaise - focus follows mouse
+brew services start autoraise 2>/dev/null && echo "  ✅ AutoRaise started" || echo "  ⚠️  AutoRaise failed to start"
+
+# Aerospace - tiling window manager (starts borders via after-startup-command)
+if ! pgrep -q AeroSpace; then
+  echo "  🪟 Starting Aerospace..."
+  open -a AeroSpace
+  echo "  ✅ Aerospace started (borders will follow)"
+else
+  echo "  ✅ Aerospace already running"
+fi
+
 # ─── Wallpaper ─────────────────────────────────────────────────────────────────
 echo ""
 echo "🖼️  Setting desktop wallpaper..."
