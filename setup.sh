@@ -90,11 +90,18 @@ python3 "$DOTFILES_DIR/scripts/setup_dock.py"
 echo ""
 echo "🧊 Importing Ice (menu bar) preferences..."
 # Quit Ice if running so preferences take effect cleanly
-killall Ice 2>/dev/null || true
+osascript -e 'tell application "Ice" to quit' 2>/dev/null || true
 sleep 1
 defaults import com.jordanbaird.Ice "$DOTFILES_DIR/config/ice/com.jordanbaird.Ice.plist"
 open -a Ice
-echo "  ✅ Ice preferences imported and app started"
+
+# Ensure Ice starts at login
+if ! osascript -e 'tell application "System Events" to get the name of every login item' 2>/dev/null | grep -q "Ice"; then
+  osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Ice.app", hidden:false}' 2>/dev/null
+  echo "  ✅ Ice added to login items"
+else
+  echo "  ✅ Ice already in login items"
+fi
 
 # ─── Wallpaper ─────────────────────────────────────────────────────────────────
 echo ""
