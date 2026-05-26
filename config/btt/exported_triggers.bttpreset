@@ -3,40 +3,36 @@
     "BTTTriggerType" : 103,
     "BTTTriggerTypeDescriptionReadOnly" : "3 Finger Swipe Right",
     "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-    "BTTPredefinedActionType" : 206,
-    "BTTShellScriptCommand" : "/opt/homebrew/bin/aerospace workspace next",
     "BTTEnabled2" : 1,
     "BTTUUID" : "A1B2C3D4-1111-4444-AAAA-000000000001",
-    "BTTOrder" : 0
+    "BTTOrder" : 0,
+    "BTTShortcutToSend" : "58,124"
   },
   {
     "BTTTriggerType" : 102,
     "BTTTriggerTypeDescriptionReadOnly" : "3 Finger Swipe Left",
     "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-    "BTTPredefinedActionType" : 206,
-    "BTTShellScriptCommand" : "/opt/homebrew/bin/aerospace workspace prev",
     "BTTEnabled2" : 1,
     "BTTUUID" : "A1B2C3D4-2222-4444-AAAA-000000000002",
-    "BTTOrder" : 1
+    "BTTOrder" : 1,
+    "BTTShortcutToSend" : "58,123"
   },
   {
     "BTTTriggerType" : 106,
     "BTTTriggerTypeDescriptionReadOnly" : "4 Finger Swipe Right",
     "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-    "BTTPredefinedActionType" : 206,
-    "BTTShellScriptCommand" : "/opt/homebrew/bin/aerospace workspace next",
     "BTTEnabled2" : 1,
     "BTTUUID" : "A1B2C3D4-3333-4444-AAAA-000000000003",
-    "BTTOrder" : 2
+    "BTTOrder" : 2,
+    "BTTShortcutToSend" : "58,124"
   },
   {
     "BTTTriggerType" : 105,
     "BTTTriggerTypeDescriptionReadOnly" : "4 Finger Swipe Left",
     "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-    "BTTPredefinedActionType" : 206,
-    "BTTShellScriptCommand" : "/opt/homebrew/bin/aerospace workspace prev",
     "BTTEnabled2" : 1,
     "BTTUUID" : "A1B2C3D4-4444-4444-AAAA-000000000004",
-    "BTTOrder" : 3
+    "BTTOrder" : 3,
+    "BTTShortcutToSend" : "58,123"
   }
 ]
