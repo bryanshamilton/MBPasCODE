@@ -34,10 +34,20 @@ def set_wallpaper(image_path):
         "Provider": "com.apple.wallpaper.choice.image",
     }
 
+    content = {
+        "Choices": [choice],
+        "Shuffle": "$null",
+    }
+
     # Apply to all spaces and displays
     for section in ["AllSpacesAndDisplays", "SystemDefault"]:
-        if section in store:
-            store[section]["Desktop"]["Content"]["Choices"] = [choice]
+        if section not in store:
+            store[section] = {}
+        if "Desktop" not in store[section]:
+            store[section]["Desktop"] = {}
+        if "Content" not in store[section]["Desktop"]:
+            store[section]["Desktop"]["Content"] = {}
+        store[section]["Desktop"]["Content"]["Choices"] = [choice]
 
     with open(STORE_PATH, "wb") as f:
         plistlib.dump(store, f, fmt=plistlib.FMT_BINARY)
