@@ -81,6 +81,11 @@ else
   echo "  ✅ Aerospace already running"
 fi
 
+# ─── App Preferences ───────────────────────────────────────────────────────────
+echo ""
+echo "🧊 Importing Ice (menu bar) preferences..."
+defaults import com.jordanbaird.Ice "$DOTFILES_DIR/config/ice/com.jordanbaird.Ice.plist"
+
 # ─── Wallpaper ─────────────────────────────────────────────────────────────────
 echo ""
 echo "🖼️  Setting desktop wallpaper..."

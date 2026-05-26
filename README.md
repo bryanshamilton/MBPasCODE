@@ -35,7 +35,8 @@ chmod +x setup.sh
 │   ├── fish/config.fish           # Shell config
 │   ├── gh/config.yml              # GitHub CLI
 │   ├── ghostty/config.ghostty     # Terminal emulator
-│   └── git/gitconfig              # Git user config
+│   ├── git/gitconfig              # Git user config
+│   └── ice/com.jordanbaird.Ice.plist  # Menu bar layout
 ├── wallpaper/desktop.png          # Desktop background
 └── README.md
 ```
