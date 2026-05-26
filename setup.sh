@@ -84,7 +84,12 @@ fi
 # ─── App Preferences ───────────────────────────────────────────────────────────
 echo ""
 echo "🧊 Importing Ice (menu bar) preferences..."
+# Quit Ice if running so preferences take effect cleanly
+killall Ice 2>/dev/null || true
+sleep 1
 defaults import com.jordanbaird.Ice "$DOTFILES_DIR/config/ice/com.jordanbaird.Ice.plist"
+open -a Ice
+echo "  ✅ Ice preferences imported and app started"
 
 # ─── Wallpaper ─────────────────────────────────────────────────────────────────
 echo ""
