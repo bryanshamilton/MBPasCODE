@@ -1,0 +1,30 @@
+# VS Code Extensions — managed by MBPasCODE
+# Install with: xargs -L 1 code --install-extension < extensions.txt
+
+# Core
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+github.copilot
+github.copilot-chat
+
+# TypeScript / JavaScript
+yoavbls.pretty-ts-errors
+usernamehw.errorlens
+wix.vscode-import-cost
+
+# Astro
+astro-build.astro-vscode
+
+# DevOps / Infra
+ms-azuretools.vscode-docker
+amazonwebservices.aws-toolkit-vscode
+
+# Git & Collaboration
+eamodio.gitlens
+github.vscode-pull-request-github
+
+# DX / Quality of Life
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+gruntfuggly.todo-tree
+mikestead.dotenv

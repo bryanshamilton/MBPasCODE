@@ -86,6 +86,25 @@ fi
 echo ""
 python3 "$DOTFILES_DIR/scripts/setup_dock.py"
 
+# ─── VS Code ───────────────────────────────────────────────────────────────────
+echo ""
+echo "💻 Setting up VS Code..."
+
+# Symlink settings.json
+VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
+mkdir -p "$VSCODE_USER_DIR"
+link_config "$DOTFILES_DIR/config/code/settings.json" "$VSCODE_USER_DIR/settings.json"
+
+# Install extensions
+if command -v code &>/dev/null; then
+  echo "  📦 Installing VS Code extensions..."
+  grep -v '^#' "$DOTFILES_DIR/config/code/extensions.txt" | grep -v '^$' | while read -r ext; do
+    code --install-extension "$ext" --force 2>/dev/null && echo "    ✅ $ext" || echo "    ⚠️  Failed: $ext"
+  done
+else
+  echo "  ⚠️  'code' CLI not found — open VS Code and run 'Shell Command: Install code command in PATH'"
+fi
+
 # ─── App Preferences ───────────────────────────────────────────────────────────
 echo ""
 echo "🧊 Importing Ice (menu bar) preferences..."

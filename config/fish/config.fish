@@ -9,6 +9,7 @@ atuin init fish | source
 alias ll="eza -al --icons"
 alias ls="eza --icons"
 alias cat="bat"
+alias copilot="gh copilot"
 
 set -gx EDITOR "code"
 

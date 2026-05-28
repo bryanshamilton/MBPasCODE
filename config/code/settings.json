@@ -1,0 +1,85 @@
+{
+  // ─── Editor ──────────────────────────────────────────────────────────────────
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
+
+  // ─── Theme & Appearance ──────────────────────────────────────────────────────
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.startupEditor": "none",
+  "window.commandCenter": true,
+
+  // ─── Terminal ────────────────────────────────────────────────────────────────
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 13,
+
+  // ─── Files ───────────────────────────────────────────────────────────────────
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+  },
+
+  // ─── Git ─────────────────────────────────────────────────────────────────────
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // ─── TypeScript / JavaScript ─────────────────────────────────────────────────
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // ─── Formatting ──────────────────────────────────────────────────────────────
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+  },
+
+  // ─── Catppuccin Accent ─────────────────────────────────────────────────────
+  "catppuccin.accentColor": "peach",
+  "workbench.colorCustomizations": {
+    "[Catppuccin Mocha]": {
+      "editorCursor.foreground": "#f88d1d",
+      "tab.activeBorderTop": "#f88d1d",
+      "activityBarBadge.background": "#f88d1d",
+      "list.activeSelectionIconForeground": "#f88d1d",
+      "focusBorder": "#f88d1d"
+    }
+  },
+
+  // ─── Extensions ──────────────────────────────────────────────────────────────
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.messageMaxChars": 100,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "aws.cloudformation.telemetry.enabled": true,
+  "amazonQ.suppressPrompts": {
+    "amazonQChatDisclaimer": true,
+  },
+}

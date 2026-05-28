@@ -26,7 +26,7 @@ chmod +x setup.sh
 | **Gestures** | BetterTouchTool — 3/4-finger swipe for Aerospace workspace switching |
 | **Menu Bar** | Ice (hide/show sections, layout) |
 | **CLI Tools** | atuin, bat, eza, fd, fzf, ripgrep, zoxide, direnv |
-| **Dev** | git, gh, nvm, awscli, Docker Desktop, VS Code |
+| **Dev** | git, gh, nvm, awscli, Docker Desktop, VS Code (extensions + settings) |
 | **Apps** | Chrome, Obsidian, Figma, Claude, ChatGPT, Pocket Casts |
 | **macOS Prefs** | Fast key repeat, no natural scroll, Finder improvements, Dock config |
 | **Desktop** | Custom wallpaper (fit to screen, black background) |
@@ -39,9 +39,10 @@ chmod +x setup.sh
 4. Sets **Fish** as default shell
 5. Starts **AutoRaise** service and **Aerospace**
 6. Configures the **Dock** (apps, autohide, size, magnification)
-7. Imports **Ice** preferences and adds to login items
-8. Sets **wallpaper** (fit to screen, black background)
-9. Applies **macOS defaults** (keyboard, trackpad, Finder, disable native space-switching)
+7. Installs **VS Code** extensions and symlinks settings
+8. Imports **Ice** preferences and adds to login items
+9. Sets **wallpaper** (fit to screen, black background)
+10. Applies **macOS defaults** (keyboard, trackpad, Finder, disable native space-switching)
 
 ## Structure
 
@@ -57,6 +58,8 @@ chmod +x setup.sh
 │   ├── borders/bordersrc             # Active window border (Catppuccin blue)
 │   ├── btt/exported_triggers.bttpreset  # Trackpad gestures → Aerospace
 │   ├── fish/config.fish              # Shell (starship, zoxide, atuin, aliases)
+│   ├── code/extensions.txt            # VS Code extensions list
+│   ├── code/settings.json            # VS Code user settings
 │   ├── gh/config.yml                 # GitHub CLI (pr checkout alias)
 │   ├── ghostty/config.ghostty        # Terminal (font, theme, splits, keybinds)
 │   ├── git/gitconfig                 # User config + global ignore
