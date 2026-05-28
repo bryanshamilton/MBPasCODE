@@ -13,6 +13,13 @@ alias copilot="gh copilot"
 
 set -gx EDITOR "code"
 
+# Navigation abbreviations
+abbr -a ccode 'cd ~/Code'
+abbr -a carrow 'cd ~/Code/arrow'
+abbr -a cpersonal 'cd ~/Code/personal'
+abbr -a clabs 'cd ~/Code/labs'
+abbr -a cai 'cd ~/Code/ai'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end

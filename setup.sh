@@ -51,6 +51,25 @@ link_config "$DOTFILES_DIR/config/git/gitconfig"            "$HOME/.gitconfig"
 link_config "$DOTFILES_DIR/config/git/gitignore_global"     "$HOME/.config/git/gitignore_global"
 link_config "$DOTFILES_DIR/config/gh/config.yml"            "$HOME/.config/gh/config.yml"
 
+# ─── Code directory structure ──────────────────────────────────────────────────
+echo ""
+echo "📁 Setting up ~/Code directory structure..."
+mkdir -p "$HOME/Code"/{arrow,personal,labs,forks,archive,ai}
+if [ ! -f "$HOME/Code/README.md" ]; then
+  cat > "$HOME/Code/README.md" <<'EOF'
+# Local Code Organization
+- arrow/ — Arrow work projects and internal tooling
+- personal/ — personal repos and side projects
+- ai/ — generated experiments, Claude Code workspaces, prompts, agents
+- labs/ — experiments, spikes, throwaway tests
+- forks/ — cloned third-party repos
+- archive/ — old local projects kept for reference
+EOF
+  echo "  ✅ Created ~/Code with README"
+else
+  echo "  ✅ ~/Code already exists"
+fi
+
 # ─── Set Fish as default shell ─────────────────────────────────────────────────
 FISH_PATH="/opt/homebrew/bin/fish"
 if ! grep -q "$FISH_PATH" /etc/shells; then
