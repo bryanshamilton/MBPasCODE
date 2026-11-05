@@ -45,6 +45,7 @@ link_config "$DOTFILES_DIR/config/aerospace/aerospace.toml" "$HOME/.config/aeros
 link_config "$DOTFILES_DIR/config/ghostty/config.ghostty"   "$HOME/.config/ghostty/config.ghostty"
 link_config "$DOTFILES_DIR/config/fish/config.fish"         "$HOME/.config/fish/config.fish"
 link_config "$DOTFILES_DIR/config/borders/bordersrc"        "$HOME/.config/borders/bordersrc"
+link_config "$DOTFILES_DIR/config/fish/functions/dev.fish" "$HOME/.config/fish/functions/dev.fish"
 link_config "$DOTFILES_DIR/config/atuin/config.toml"        "$HOME/.config/atuin/config.toml"
 link_config "$DOTFILES_DIR/config/AutoRaise/config"         "$HOME/.config/AutoRaise/config"
 link_config "$DOTFILES_DIR/config/git/gitconfig"            "$HOME/.gitconfig"
